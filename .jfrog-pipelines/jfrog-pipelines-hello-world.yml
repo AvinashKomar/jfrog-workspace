@@ -3,7 +3,7 @@ resources:
     type: GitRepo
     configuration:
       # SCM integration where the repository is located
-      gitProvider: g_one # this will be replaced from values.yml
+      gitProvider: first # this will be replaced from values.yml
       # Repository path, including org name/repo name
       path: AvinashKomar/jfrog-workspace # this will be replaced from values.yml
       branches:
