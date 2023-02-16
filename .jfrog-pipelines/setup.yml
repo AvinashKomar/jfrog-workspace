@@ -23,7 +23,6 @@ pipelines:
     - name: first
       type: Bash
       configuration:
-        requiresApproval: true
         inputResources: 
           - name: test
       execution:
