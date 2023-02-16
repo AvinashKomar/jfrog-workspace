@@ -17,12 +17,35 @@ resources:
       runID: 1
       
 pipelines:
-  - name: Frogbot_Scan_PR
+
+- name: Frogbot_Scan_PR
     steps:
     - name: first
       type: Bash
       configuration:
-        requiresApproval: true
+          inputResources:
+            - name: test
       execution:
         onExecute:
-          - echo "HELLO Avinash..!!"
+          - echo "HELLO Avinash.. ONE!!"
+          
+    steps:
+    - name: second
+      type: Bash
+      configuration:
+        requiresApproval: true
+        inputSteps:
+            - name: first
+      execution:
+        onExecute:
+          - echo "HELLO Avinash.. TWO!!"
+     
+      steps:
+       - name: third
+         type: Bash
+         configuration:
+           inputSteps:
+            - name: second
+           execution:
+              onExecute:
+                - echo "HELLO Avinash.. THREE!!"
