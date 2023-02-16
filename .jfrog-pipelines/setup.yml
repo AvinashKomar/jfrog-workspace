@@ -18,7 +18,7 @@ resources:
       
 pipelines:
 
-- name: Frogbot_Scan_PR
+  - name: Frogbot_Scan_PR
     steps:
     - name: first
       type: Bash
@@ -29,7 +29,6 @@ pipelines:
         onExecute:
           - echo "HELLO Avinash.. ONE!!"
           
-    steps:
     - name: second
       type: Bash
       configuration:
@@ -40,12 +39,12 @@ pipelines:
         onExecute:
           - echo "HELLO Avinash.. TWO!!"
      
-      steps:
-       - name: third
-         type: Bash
-         configuration:
-           inputSteps:
-            - name: second
-           execution:
-              onExecute:
-                - echo "HELLO Avinash.. THREE!!"
+
+    - name: third
+      type: Bash
+      configuration:
+        inputSteps:
+          - name: second
+      execution:
+        onExecute:
+          - echo "HELLO Avinash.. THREE!!"
