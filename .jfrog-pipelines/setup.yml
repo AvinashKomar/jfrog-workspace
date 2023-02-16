@@ -1,5 +1,5 @@
 resources:
-  - name: myFirstRepo
+  - name: test
     type: GitRepo
     configuration:
       # SCM integration where the repository is located
