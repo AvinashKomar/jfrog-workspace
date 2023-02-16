@@ -42,9 +42,6 @@ pipelines:
 
     - name: third
       type: Bash
-      configuration:
-        inputSteps:
-          - name: second
       execution:
         onExecute:
           - echo "HELLO Avinash.. THREE!!"
