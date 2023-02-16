@@ -23,7 +23,8 @@ pipelines:
     - name: first
       type: Bash
       configuration:
-        inputResources: test
+        inputResources: 
+          - name: test
       execution:
         onExecute:
           - echo "HELLO Avinash.. ONE!!"
