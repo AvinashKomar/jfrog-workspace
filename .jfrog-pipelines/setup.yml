@@ -18,9 +18,11 @@ resources:
       
 pipelines:
   - name: Frogbot_Scan_PR
-    type: Bash
-    configuration:
-      requiresApproval: true
-    execution:
-      onExecute:
-        - echo "HELLO Avinash..!!"
+    steps:
+    - name: first
+      type: Bash
+      configuration:
+        requiresApproval: true
+      execution:
+        onExecute:
+          - echo "HELLO Avinash..!!"
