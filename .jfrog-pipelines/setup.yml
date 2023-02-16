@@ -10,7 +10,7 @@ resources:
         # Specifies which branches will trigger dependent steps
         include: main
 
-  - name: myPropertyBag
+  - name: myBag
     type: PropertyBag
     configuration:
       commitSha: 1
