@@ -42,6 +42,9 @@ pipelines:
 
     - name: third
       type: Bash
+      configuration:
+        inputResources: 
+          - name: test
       execution:
         onExecute:
           - echo "HELLO Avinash.. THREE!!"
