@@ -22,9 +22,6 @@ pipelines:
     steps:
     - name: first
       type: Bash
-      configuration:
-          inputResources:
-            - name: test
       execution:
         onExecute:
           - echo "HELLO Avinash.. ONE!!"
