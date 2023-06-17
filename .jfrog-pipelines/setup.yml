@@ -30,6 +30,7 @@ pipelines:
       execution:
         onExecute:
           - echo "HELLO Avinash.. ONE!!"
+          - add_run_variables x="1"
           
     - name: second
       type: Bash
@@ -50,3 +51,4 @@ pipelines:
       execution:
         onExecute:
           - echo "HELLO Avinash.. THREE!!"
+          - echo "X = `${x}`"
