@@ -40,7 +40,7 @@ pipelines:
       execution:
         onExecute:
           - |
-              if [[ $x -eq 1 ]]; then
+              if [ $x -eq 1 ]; then
                 echo "$x is valid"
               else
                 echo "Please $x is invalid"
