@@ -41,6 +41,7 @@ pipelines:
       execution:
         onExecute:
           - echo "HELLO Avinash.. TWO!!"
+          -- echo `${x}`
      
 
     - name: third
@@ -51,4 +52,3 @@ pipelines:
       execution:
         onExecute:
           - echo "HELLO Avinash.. THREE!!"
-          - echo "X = `${x}`"
