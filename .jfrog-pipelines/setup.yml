@@ -38,9 +38,10 @@ pipelines:
         inputSteps:
             - name: first
       execution:
-        onExecute:
-          - echo "HELLO Avinash.. TWO!!"
-          - echo "X: '${x}'"
+        onExecute:[
+          echo "X '${x}'"
+        ]
+        
      
 
     - name: third
