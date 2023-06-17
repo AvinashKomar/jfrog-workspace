@@ -37,11 +37,10 @@ pipelines:
       configuration:
         inputSteps:
             - name: first
-      execution:{
-        onExecute:[
-          echo "X '${x}'"
-        ]
-      }
+      execution:
+        onExecute:
+          - echo "X = ${x}"
+      
         
     - name: third
       type: Bash
