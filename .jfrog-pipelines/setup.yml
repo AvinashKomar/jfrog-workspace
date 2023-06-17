@@ -41,7 +41,7 @@ pipelines:
       execution:
         onExecute:
           - echo "HELLO Avinash.. TWO!!"
-          -- echo `${x}`
+          - echo `${x}`
      
 
     - name: third
