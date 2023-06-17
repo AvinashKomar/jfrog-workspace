@@ -39,7 +39,11 @@ pipelines:
             - name: first
       execution:
         onExecute:
-          - echo "X = ${x}"
+          - if [ $x -eq 1 ]; then 
+              echo "X = ${x}"
+            else
+              echo "X= ${x}"
+            fi
       
         
     - name: third
