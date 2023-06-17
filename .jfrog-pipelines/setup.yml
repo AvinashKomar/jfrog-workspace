@@ -30,7 +30,7 @@ pipelines:
       execution:
         onExecute:
           - echo "HELLO Avinash.. ONE!!"
-          - add_run_variables x="1"
+          - add_run_variables x=1
           
     - name: second
       type: Bash
@@ -39,11 +39,12 @@ pipelines:
             - name: first
       execution:
         onExecute:
-          - if [ $x -eq 1 ]; then 
-              echo "X = ${x}"
-            else
-              echo "X= ${x}"
-            fi
+          - |
+              if [[ $x -eq 1 ]]; then
+                echo "$x is valid"
+              else
+                echo "Please $x is invalid"
+              fi
       
         
     - name: third
