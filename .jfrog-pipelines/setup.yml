@@ -35,13 +35,12 @@ pipelines:
     - name: second
       type: Bash
       configuration:
-        requiresApproval: true
         inputSteps:
             - name: first
       execution:
         onExecute:
           - echo "HELLO Avinash.. TWO!!"
-          - echo `${x}`
+          - echo "X: '${x}'"
      
 
     - name: third
