@@ -54,10 +54,10 @@ pipelines:
           - name: myFirstRepo
       execution:
         onExecute:
-          - i = 0
           - |
+              i=0
               while [ $i -lt 5 ]
               do
                 echo "$i"
-                i=$(( i + 1 ))
+                i=$(( $i + 1 ))
               done
