@@ -57,7 +57,7 @@ pipelines:
           - |
               status="IN_PROGRESS"
               i=0
-              while [ $status == "IN_PROGRESS" ]
+              while [ "$status" == "IN_PROGRESS" ]
               do
                 echo "current status $status"
                 i=$(( $i + 1 ))
