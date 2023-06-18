@@ -60,8 +60,8 @@ pipelines:
               while [ $status == "IN_PROGRESS" ]
               do
                 echo "current status $status"
+                i=$(( $i + 1 ))
                 if [ $i -gt 5 ]; then
                   status="SUCCESS"
                 fi
-                i=$(( $i + 1 ))
               done
