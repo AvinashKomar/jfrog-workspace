@@ -55,9 +55,13 @@ pipelines:
       execution:
         onExecute:
           - |
+              status="IN_PROGRESS"
               i=0
-              while [ $i -lt 5 ]
+              while [ $status == "IN_PROGRESS" ]
               do
-                echo "$i"
+                echo "current status $status"
+                if [ $i -gt 5 ]; then
+                  status="SUCCESS"
+                fi
                 i=$(( $i + 1 ))
               done
