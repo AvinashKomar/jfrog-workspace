@@ -54,4 +54,10 @@ pipelines:
           - name: myFirstRepo
       execution:
         onExecute:
-          - echo "HELLO Avinash.. THREE!!"
+          - i = 0
+          - |
+              while [ $i -lt 5 ]
+              do
+                echo "$i"
+                i=$(( i + 1 ))
+              done
