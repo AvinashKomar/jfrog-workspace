@@ -30,7 +30,7 @@ pipelines:
       execution:
         onExecute:
           - echo "HELLO Avinash.. ONE!!"
-          - add_run_variables x=1
+          - add_run_variables x=2
           
     - name: second
       type: Bash
@@ -40,10 +40,10 @@ pipelines:
       execution:
         onExecute:
           - |
-              if [ $x -eq 1 ]; then
+              if [ $x -eq 2 ]; then
                 echo "$x is valid"
               else
-                echo "Please $x is invalid"
+                echo "$x is invalid"
               fi
       
         
