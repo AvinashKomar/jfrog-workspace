@@ -28,6 +28,7 @@ pipelines:
         inputResources: 
           - name: myFirstRepo
         environmentVariables:
+        readOnly:
           env1: pipe_value1
           env2:
             default: pipe_value2
