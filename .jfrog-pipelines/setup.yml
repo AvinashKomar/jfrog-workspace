@@ -32,6 +32,7 @@ pipelines:
               - pipe_value2
               - pipe_value3
               - pipe_value4
+            allowCustom: true
           env3:
             default: "abc"
             allowCustom: true
