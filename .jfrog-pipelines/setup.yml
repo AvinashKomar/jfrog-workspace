@@ -27,6 +27,18 @@ pipelines:
       configuration:
         inputResources: 
           - name: myFirstRepo
+        environmentVariables:
+          env1: pipe_value1
+          env2:
+            default: "2"
+            description: This is env2 description
+            values:
+              - "1"
+              - "2"
+              - "3"
+          env3:
+            default: "abc"
+            allowCustom: true
       execution:
         onExecute:
           - echo "HELLO Avinash.. ONE!!"
