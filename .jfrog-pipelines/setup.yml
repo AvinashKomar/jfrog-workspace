@@ -23,6 +23,7 @@ pipelines:
   - name: Mr_AviKom
     configuration:
         environmentVariables:
+         readOnly:
           env1: pipe_value1
           env2:
             default: pipe_value2
