@@ -21,18 +21,6 @@ resources:
 pipelines:
 
   - name: Mr_AviKom
-      environmentVariables:
-          env1: pipe_value1
-          env2:
-            default: pipe_value2
-            description: This is env2 description
-            values:
-              - pipe_value2
-              - pipe_value3
-              - pipe_value4
-          env3:
-            default: "abc"
-            allowCustom: true
     steps:
     - name: first
       type: Bash
