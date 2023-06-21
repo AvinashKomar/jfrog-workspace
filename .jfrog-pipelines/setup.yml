@@ -20,14 +20,8 @@ resources:
       
 pipelines:
 
-  - name: Frogbot_Scan_PR
-    steps:
-    - name: first
-      type: Bash
-      configuration:
-        inputResources: 
-          - name: myFirstRepo
-        environmentVariables:
+  - name: Mr_AviKom
+      environmentVariables:
         readOnly:
           env1: pipe_value1
           env2:
@@ -40,6 +34,12 @@ pipelines:
           env3:
             default: "abc"
             allowCustom: true
+    steps:
+    - name: first
+      type: Bash
+      configuration:
+        inputResources: 
+          - name: myFirstRepo
       execution:
         onExecute:
           - echo "HELLO Avinash.. ONE!!"
