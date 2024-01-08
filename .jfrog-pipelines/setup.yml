@@ -76,31 +76,3 @@ pipelines:
                   status="SUCCESS"
                 fi
               done
-
-    - name: test_sonar
-      type: Bash
-      configuration:
-        outputResources:
-          - name: first
-          - name: second
-      execution:
-          onExecute:
-            - write_output first "coverage=80"
-            - write_output first "bugs=2"
-            - write_output first "code_smells=4"
-            - write_output first "duplicated_lines=10"
-            - write_output first "tests=3"
-            - write_output first "duplicated_blocks=0"
-            - write_output first "ncloc=4000"
-            - write_output first "vulnerabilities=2"
-            - write_output first "security_hotspots=1"
-            # coverage 2
-            - write_output second "coverage=85"
-            - write_output second "bugs=5"
-            - write_output second "code_smells=12"
-            - write_output second "duplicated_lines=100"
-            - write_output second "tests=8"
-            - write_output second "duplicated_blocks=0"
-            - write_output second "ncloc=4000"
-            - write_output second "vulnerabilities=22"
-            - write_output second "security_hotspots=11"
