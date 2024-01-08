@@ -77,13 +77,13 @@ pipelines:
                 fi
               done
 
-      - name: test_sonar
-        type: Bash
-        configuration:
-          outputResources:
-            - name: git_sonar_km_1
-            - name: git_sonar_km_2
-        execution:
+    - name: test_sonar
+      type: Bash
+      configuration:
+        outputResources:
+          - name: git_sonar_km_1
+          - name: git_sonar_km_2
+      execution:
           onExecute:
             - write_output git_sonar_km_1 "coverage=80"
             - write_output git_sonar_km_1 "bugs=2"
