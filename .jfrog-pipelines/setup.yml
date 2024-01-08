@@ -81,26 +81,26 @@ pipelines:
       type: Bash
       configuration:
         outputResources:
-          - name: git_sonar_km_1
-          - name: git_sonar_km_2
+          - name: first
+          - name: second
       execution:
           onExecute:
-            - write_output git_sonar_km_1 "coverage=80"
-            - write_output git_sonar_km_1 "bugs=2"
-            - write_output git_sonar_km_1 "code_smells=4"
-            - write_output git_sonar_km_1 "duplicated_lines=10"
-            - write_output git_sonar_km_1 "tests=3"
-            - write_output git_sonar_km_1 "duplicated_blocks=0"
-            - write_output git_sonar_km_1 "ncloc=4000"
-            - write_output git_sonar_km_1 "vulnerabilities=2"
-            - write_output git_sonar_km_1 "security_hotspots=1"
+            - write_output first "coverage=80"
+            - write_output first "bugs=2"
+            - write_output first "code_smells=4"
+            - write_output first "duplicated_lines=10"
+            - write_output first "tests=3"
+            - write_output first "duplicated_blocks=0"
+            - write_output first "ncloc=4000"
+            - write_output first "vulnerabilities=2"
+            - write_output first "security_hotspots=1"
             # coverage 2
-            - write_output git_sonar_km_2 "coverage=85"
-            - write_output git_sonar_km_2 "bugs=5"
-            - write_output git_sonar_km_2 "code_smells=12"
-            - write_output git_sonar_km_2 "duplicated_lines=100"
-            - write_output git_sonar_km_2 "tests=8"
-            - write_output git_sonar_km_2 "duplicated_blocks=0"
-            - write_output git_sonar_km_2 "ncloc=4000"
-            - write_output git_sonar_km_2 "vulnerabilities=22"
-            - write_output git_sonar_km_2 "security_hotspots=11"
+            - write_output second "coverage=85"
+            - write_output second "bugs=5"
+            - write_output second "code_smells=12"
+            - write_output second "duplicated_lines=100"
+            - write_output second "tests=8"
+            - write_output second "duplicated_blocks=0"
+            - write_output second "ncloc=4000"
+            - write_output second "vulnerabilities=22"
+            - write_output second "security_hotspots=11"
